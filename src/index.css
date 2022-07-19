@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:  black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.image-height{
+  height: 250px !important;
+  
+}
+
+.overlay{
+  position : absolute;
+  top : 0;
+  bottom : 0;
+  left : 0;
+  right : 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  content : "";
+
+}
+
+.flex{
+  display : flex;
+  justify-content : center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.none{
+  display : none;
+}
+
+.my-grid{
+  grid-template-columns: repeat(4, 1fr) !important; 
+  gap: 4px;
+}
+
+@media only screen and (max-width: 700px) {
+  .my-grid{
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 4px;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  .my-grid{
+    grid-template-columns: repeat(1, 1fr) !important; 
+    gap: 4px;
+}
 }
